@@ -1,0 +1,444 @@
+<!--
+
+<div id="users">
+	<h2>Users</h2>
+	<% @users.each do |user| %>
+		<div class="card">
+			<%= link_to user.name, user %>
+			<hr>
+			<%= user.mail %>
+		</div>
+	<% end %>
+	<center><%= link_to 'Register', new_user_path %></center>
+</div>
+
+<div id="addTask">Test-hoi</div>
+-->
+<div id="register"><%= link_to 'Register', new_user_path %></div>
+<div id="header">
+    <div id="logo">
+	 <%= image_tag "pimpLogo.png"%>
+    </div>
+	<div id="middenscherm">
+		<div id="watDoeJe">
+			<textarea id="textWatDoeJe" class="watDoeJe">Wat doe je?</textarea>
+			<div id="knoppen">
+				<button class="bestandToevoegen">
+					<a href="#"><%= link_to 'Voeg bestand toe', new_document_path %></a>
+				</button>
+				<button id="basic-modal" class="taakToevoegen">
+					<%= link_to 'Voeg taak toe', new_task_path %>
+				</button>
+				<button class="verzenden">
+					<%= link_to 'Verzenden', new_tweet_path %>
+				</button>
+			</div>
+		</div>
+	</div>
+    <div id="inlogscherm">
+		
+		<div id="profielNaam">
+			<%= User.find(1).name %>
+		</div>
+		<div class="clock">
+		   <div id="Date"></div>
+			  <ul class="clock">
+				  <li id="hours" class="clock"></li>
+				  <li id="point" class="clock">:</li>
+				  <li id="min" class="clock"></li>
+				  <li id="point" class="clock">:</li>
+				  <li id="sec" class="clock"></li>
+			  </ul>
+		</div>
+    </div>
+</div>
+<div id="contentMenu">
+    <div id="overzichtMenuButton" class="menuButton"> Overzicht </div>
+    <div id="roosterMenuButton" class="menuButton"> Rooster </div>
+    <div id="takenMenuButton" class="menuButton"> Taken </div>
+    <div id="bestandenMenuButton" class="menuButton"> Bestanden </div>
+</div>
+<div id="content">
+    <div id="overzicht">
+		<div id="berichtenOverzicht">	
+			<h1>Berichten</h1>
+			<div id="tweets">
+				<% @tweets.reverse.each do |tweet| %>
+					<div class="bericht">
+						<p class="titelTaak"><%= tweet.message %></p>
+						<hr>
+						<p class="dateBericht">Posted by <%= tweet.user.name %></p>
+					</div>
+				<% end %>
+				<% if @tweets.empty?%>
+					<em>Geen berichten gevonden</em>
+				<% end %>
+			</div>
+		</div>
+        <div id="taken">
+            <h1>Taken</h1>
+				<div id="takenOverzicht">
+					<% @tasks.each do |task| %>
+						<div class="taak">
+							<p class="titelTaak"><%= task.name %></p>
+							<hr>
+							<p class="userTaak">Assigned to <%= task.user.name %></p>
+						</div>
+					<% end %>
+					<% if @tasks.empty?%>
+						<em>Geen taken gevonden</em>
+					<% end %>
+				</div>
+        </div>
+        <div id="bestandenOverzicht">
+			<h1>Users</h1>
+			<% @users.each do |user| %>
+				<div class="bestand">
+					<p class="titelBestand"><%= link_to user.name, user %></p>
+					<p class="titeBestand"><%= user.mail %></p>
+				</div>
+			<% end %>
+			<% if @users.empty?%>
+				<em>Geen gebruikers gevonden</em>
+			<% end %>
+        </div>
+    </div>
+	
+    <div id="rooster" >
+        <div id="alGereserveerd">
+            <h1>Wat heb ik gereserveerd?</h1>
+				<div id="maandagBezetButton" class="roosterMenuButton">Maandag</div>
+				<div id="dinsdagBezetButton" class="roosterMenuButton">Dinsdag</div>
+				<div id="woensdagBezetButton" class="roosterMenuButton">Woensdag</div>					
+				<div id="donderdagBezetButton" class="roosterMenuButton">Donderdag</div>	
+				<div id="vrijdagBezetButton" class="roosterMenuButton">Vrijdag</div>
+				<div id="bezetRoosterContent">
+						<div id="roosterMaandagBezet">
+							<table class="roosterBezet">
+								<tr>
+									<th class="tableTop">Etage</th>
+									<th class="tableTop">Lokaal</th>
+									<th class="tableTop">Tijd</th>
+								</tr>
+								<tr>
+									<td>0</td>
+									<td>102</td>
+									<td>9.00-12.00</td>
+								</tr>
+							</table>
+						</div>
+						<div id="roosterDinsdagBezet">
+							<p>Bassie</p>
+						</div>
+						<div id="roosterWoensdagBezet">
+							<p>Cornelius</p>
+						</div>
+						<div id="roosterDonderdagBezet">
+							<p>Davidus</p>
+						</div>
+						<div id="roosterVrijdagBezet">
+							<p>Eduardo</p>
+						</div>
+					</div>
+        </div>
+        <div id="teReserveren">
+            <h1>Wat kan ik reserveren?</h1>
+				<div id="maandagVrijButton" class="roosterMenuButton">Maandag</div>
+				<div id="dinsdagVrijButton" class="roosterMenuButton">Dinsdag</div>
+				<div id="woensdagVrijButton" class="roosterMenuButton">Woensdag</div>					
+				<div id="donderdagVrijButton" class="roosterMenuButton">Donderdag</div>	
+				<div id="vrijdagVrijButton" class="roosterMenuButton">Vrijdag</div>
+					<div id="vrijRoosterContent">
+						<div id="roosterMaandagVrij">
+							<input name="maandag" type="submit" class="vrijRooster" value="Reserveer"/>
+							<script type="text/javascript" src="rooster/maandag.optionTree.js"></script>
+						</div>
+						<div id="roosterDinsdagVrij">
+							<input name="dinsdag" type="submit" value="Reserveer"/>
+							<script type="text/javascript" src="rooster/dinsdag.optionTree.js"></script>
+						</div>
+						<div id="roosterWoensdagVrij">
+							<input name="woensdag" type="submit" value="Reserveer"/>
+							<script type="text/javascript" src="rooster/woensdag.optionTree.js"></script>
+						</div>
+						<div id="roosterDonderdagVrij">
+							<input name="donderdag" type="submit" value="Reserveer"/>
+							<script type="text/javascript" src="rooster/donderdag.optionTree.js"></script>
+						</div>
+						<div id="roosterVrijdagVrij">
+							<input name="vrijdag" type="submit" value="Reserveer"/>
+							<script type="text/javascript" src="rooster/vrijdag.optionTree.js"></script>
+						</div>
+					</div>
+        </div>
+    </div>
+	
+    <div id="takenTotaal">
+        <div id="mijnTaken">
+				<h1>Mijn taken</h1>
+					<div id="mijnTakenTwee">
+						<div id="basic-modal">
+							<a href='#' class='basic'></a>
+						</div>
+							<div class="taak">
+								<% User.find(1).tasks.each do |task| %>
+									<div class="taak">
+										<p class="titelTaak"><%= task.name %></p>
+										<hr>
+										<p class="userTaak">Assigned to <%= task.user.name %></p>
+									</div>
+								<% end %>
+								<% if User.find(1).tasks.empty?%>
+									<em>Geen taken gevonden</em>
+								<% end %>
+							</div>	
+						
+						<!-- modal content -->
+						<div id="basic-modal-content">
+							<h1>Voeg taak toe:</h1>
+							<table class="voegTaakToe">
+								<tr><th class="taakHoofd">Geef je taak een titel:</th><td><textarea class="taakTitelTextarea"></textarea></td></tr>
+								<tr><th class="taakHoofd">Geef je taak een inhoud:</th><td><textarea class="taakInhoudTextarea"></textarea></td></tr>
+								<tr><th class="taakHoofd">Geef je taak een prioriteit:</th><td><input type="range" min="0" max="10" value="0" step="1" onchange="showValue(this.value)" />
+								<span id="range">0</span></td></tr>
+										<script type="text/javascript">
+											function showValue(newValue){
+												document.getElementById("range").innerHTML=newValue;
+												}
+										</script>
+								<tr><th class="taakHoofd">Geef je taak een deadline:</th><td>
+									<select class="taakSelect">
+										<option disabled>Dag:</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+										<option>13</option>
+										<option>14</option>
+										<option>15</option>
+										<option>16</option>
+										<option>17</option>
+										<option>18</option>
+										<option>19</option>
+										<option>20</option>
+										<option>21</option>
+										<option>22</option>
+										<option>23</option>
+										<option>24</option>
+										<option>25</option>
+										<option>26</option>
+										<option>27</option>
+										<option>28</option>
+										<option>29</option>
+										<option>30</option>
+										<option>31</option>
+									</select>
+									<select class="taakSelect">
+										<option disabled>Maand:</option>
+										<option>januari</option>
+										<option>februari</option>
+										<option>maart</option>
+										<option>april</option>
+										<option>mei</option>
+										<option>juni</option>
+										<option>juli</option>
+										<option>augustus</option>
+										<option>september</option>
+										<option>oktober</option>
+										<option>november</option>
+										<option>december</option>
+									</select>
+									<select class="taakSelect">
+										<option disabled>Jaar:</option>
+										<option>2012</option>
+										<option>2013</option>
+										<option>2014</option>
+										<option>2015</option>
+									</select>
+								</td></tr>
+								<tr><th class="taakHoofd">Voor wie is de taak?</th><td>
+									<input type="text"></input>
+								</td></tr>
+								<tr><th></th><td><input type="submit" value="Voeg toe" style="float:left;"></input></td></tr>
+							</table>
+						</div>
+					</div>
+        </div>
+        <div id="takenMedestudenten">
+            <h1>Taken van medestudenten</h1>
+				<div id="takenMedestudentenTwee">
+						<div id="basic-modal">
+							<a href='#' class='basic'></a>
+						</div>
+							<div class="taak">
+								<%@tasks.each do |task|%>
+									<div class="taak">
+										<p class="titelTaak"><%= task.name %></p>
+										<hr>
+										<p class="userTaak">Assigned to <%= task.user.name %></p>
+									</div>
+								<% end %>
+								<% if @tasks.empty?%>
+									<em>Geen taken gevonden</em>
+								<% end %>
+							</div>
+				</div>
+        </div>
+        <div id="gedaneTaken">
+            <h1>Gedane taken</h1>
+				<div id="gedaneTakenTwee">
+					<div class="taak">
+						<% @tasks.each do |task| %>
+							<div class="taak">
+								<p class="titelTaak"><%= task.name %></p>
+								<hr>
+								<p class="userTaak">Assigned to <%= task.user.name %></p>
+							</div>
+						<% end %>
+						<% if @tasks.empty?%>
+							<em>Geen taken gevonden</em>
+						<% end %>
+					</div>
+				</div>
+        </div>
+		<div id="alleTaken">
+            <h1>Alle taken</h1>
+				<div id="alleTakenTotaal">
+					<div class="taak">
+						<% @tasks.each do |task| %>
+							<div class="taak">
+								<p class="titelTaak"><%= task.name %></p>
+								<hr>
+								<p class="userTaak">Assigned to <%= task.user.name %></p>
+							</div>
+						<% end %>
+						<% if @tasks.empty?%>
+							<em>Geen taken gevonden</em>
+						<% end %>
+					</div>
+				</div>
+        </div>
+    </div>
+	
+    <div id="bestanden">
+        <div id="onvoltooideBestanden">
+            <h1>Onvoltooide bestanden</h1>
+			<div id="onvoltooideBestandenTwee">
+				<% Document.where(:status => "ready").each do |document| %>
+				<div class="bestand"> 
+					<p class="titelBestand"><%= document.name %></p>
+					<p class="deadlineBestand">Toegevoegd op <%= document.deadline %></p>
+					<hr>
+					<p>Belongs to <%= document.user.name %></p>
+				</div>
+				<% end %>
+			</div>
+        </div>
+        <div id="nuBestanden">
+            <h1>Bestanden waaraan gewerkt wordt</h1>
+				<div id="nuBestandenTwee">
+					<% Document.where(:status => "wip").each do |document| %>
+					<div class="bestand"> 
+						<p class="titelBestand"><%= document.name %></p>
+						<p class="deadlineBestand">Toegevoegd op <%= document.deadline %></p>
+						<hr>
+						<p>Belongs to <%= document.user.name %></p>
+					</div>
+					<% end %>
+				</div>
+        </div>
+        <div id="voltooideBestanden">
+            <h1>Voltooide bestanden</h1>
+				<div id="voltooideBestandenTwee">
+					<% Document.where(:status => "done").each do |document| %>
+					<div class="bestand"> 
+						<p class="titelBestand"><%= document.name %></p>
+						<p class="deadlineBestand">Toegevoegd op <%= document.deadline %></p>
+						<hr>
+						<p>Belongs to <%= document.user.name %></p>
+					</div>
+					<% end %>
+				</div>
+        </div>
+    </div>
+	
+	<div id="profiel">
+		<h1>Max Salakory</h1>
+			<div id="profielFoto"><%= image_tag "profile-photo.jpg"%></div>
+			<div id="profielInfo">
+				<table class="profielTable">
+					<tr><th>Naam:</th>				<td>Max Salakory</td></tr>
+					<tr><th>Woonplaats:</th>		<td>Elst</td></tr>
+					<tr><th>Telefoonnummer:</th>	<td>06-66699900</td></tr>
+					<tr><th>Semester/Minor:</th>	<td>Scripten 4 Designers</td></tr>
+					<tr><th>Competentie:</td>		<th colspan="2">Indicatoren:</th></tr>
+					<tr><td>Communiceren</td>		<td>	<ul class="profielLijst">Indicator 1</ul>
+															<ul class="profielLijst">Indicator 2</ul>
+															<ul class="profielLijst">Indicator 3</ul>
+															</td>
+													<td>	<ul class="profielLijst">Indicator 1</ul>
+															<ul class="profielLijst">Indicator 2</ul>
+															<ul class="profielLijst">Indicator 3</ul>
+															</td></tr>
+				</table>
+			</div>
+			<div id="profielBerichten">
+				<h1>Mijn berichten</h1>
+					<div id="mijnBerichten">
+						<div class="bericht">
+							<% User.find(1).tweets.reverse.each do |tweet| %>
+								<div class="taak">
+									<p class="titelTaak"><%= tweet.message %></p>
+									<hr>
+									<p class="userTaak">Posted by <%= tweet.user.name %></p>
+								</div>
+							<% end %>
+							<% if User.find(1).tweets.empty?%>
+								<em>Geen berichten gevonden</em>
+							<% end %>
+						</div>
+					</div>
+			</div>
+			<div id="profielTaken">
+				<h1>Mijn taken</h1>
+					<div id="mijnProfielTaken">
+						<div class="taak">
+							<% User.find(1).tasks.each do |task| %>
+								<div class="taak">
+									<p class="titelTaak"><%= task.name %></p>
+									<hr>
+									<p class="userTaak">Assigned to <%= task.user.name %></p>
+								</div>
+							<% end %>
+							<% if User.find(1).tasks.empty?%>
+								<em>Geen taken gevonden</em>
+							<% end %>
+						</div>
+					</div>
+			</div>
+			<div id="profielBestanden">
+				<h1>Mijn bestanden</h1>
+					<div id="mijnProfielBestanden">
+						<% User.find(1).documents.each do |document| %>
+						<div class="bestand"> 
+							<p class="titelBestand"><%= document.name %></p>
+							<p class="faseBestand"><%= document.status %></p>
+							<p class="deadlineBestand"><%= document.deadline %></p>
+						</div>
+						<% end %>
+						<% if User.find(1).documents.empty?%>
+							<em>Geen bestanden gevonden</em>
+						<% end %>	
+					</div>
+			</div>
+	</div>
+    <div class="clear"></div>
+</div>

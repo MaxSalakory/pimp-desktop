@@ -1,0 +1,27 @@
+<div class="scaffold-modals">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @document.name %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @document.status %>
+</p>
+
+<p>
+  <b>Deadline:</b>
+  <%= @document.deadline %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @document.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', home_path %>
+</div>

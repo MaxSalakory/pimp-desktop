@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pimp</title>
+  	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= stylesheet_link_tag    "mystyle" %>
+  	<%= javascript_include_tag "application" %>
+  	<%= javascript_include_tag 'basic' %>
+	<%= javascript_include_tag 'jquery-1.7.1.min' %>
+	<%= javascript_include_tag 'jquery.optionTree' %>
+	<%= javascript_include_tag 'jquery.simplemodal' %>
+	<%= javascript_include_tag 'optionTree' %>
+	<%= javascript_include_tag 'maandag.optionTree' %>
+	<%= javascript_include_tag 'dinsdag.optionTree' %>
+	<%= javascript_include_tag 'woensdag.optionTree' %>
+	<%= javascript_include_tag 'donderdag.optionTree' %>
+	<%= javascript_include_tag 'vrijdag.optionTree' %>
+  	<%= csrf_meta_tags %>
+</head>
+<body>
+<div id="container">
+<%= yield %>
+</div>
+</body>
+</html>

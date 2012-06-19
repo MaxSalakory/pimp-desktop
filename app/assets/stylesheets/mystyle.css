@@ -1,0 +1,780 @@
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	background-color:#161617;
+}
+
+h1{
+	font-size:11pt;
+	font-weight:bold;
+	color:#FFFFFF;
+	text-align:center;
+	padding:5px;
+	border-radius:5px;
+	
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear,100% 100%, from(#E57000), to(#7F3E00));
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #E57000, #7F3E00);
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, #E57000, #7F3E00);
+	/* IE 10 */
+	background: -ms-linear-gradient(top, #E57000, #7F3E00);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, #E57000, #7F3E00);
+}
+
+h2{
+	width:20%;
+	font-size:10pt;
+	font-weight:bold;
+	color:#8c9de6;
+	background-color:#e3e5ec;
+	text-align:center;
+	padding:5px;
+	border-radius:5px;
+}
+
+a {
+	color:#000000;
+	text-decoration:none;
+}
+
+p {
+	color:#000000;
+	margin:5px 0px 5px 0px;
+	font-size:10pt;
+}
+
+em {
+	font-size:10pt;
+}
+
+table.roosterBezet{
+	width:100%;
+	height:100%;
+	font-size:10pt;
+	text-align:center;
+	border-radius:5px;
+}
+
+.tableTop{
+	background-color:#000000;
+	color:#FFFFFF;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+.tableVrijSide{
+	background-color:#CCCCCC;
+	color:#555555;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+.tableVrijContent{
+	color:#000000;
+	font-size:;
+	cursor:pointer;
+}
+
+#container {
+	width:1024px;
+	margin:0 auto;
+	border-radius:5px;
+	background-color:#ffae59;
+	position:relative;
+}
+
+#contentMenu{
+	width:1104px;
+	height:70px;
+	position:relative;
+	margin-top:5px;
+	margin-left:-40px;
+	padding-left:40px;
+	background-image:url('img/banner.png');
+	background-repeat:no-repeat;
+}
+
+/* ------------------------------------ MODALS ------------------------------------ */
+
+div.scaffold-modals{
+	padding:10px;
+}
+
+/* ------------------------------------ HEADER ------------------------------------ */
+
+#header {
+	height:120px;
+	position:relative;
+}
+
+#logo {
+	background-image:url('img/pimpLogo.png');
+	width:222px;
+	height:109px;
+	float:left;
+	border-radius:5px;
+	margin:10px;
+}
+
+#middenscherm{
+	width:560px;
+	height:110px;
+	float:left;
+	margin-top:10px;
+	border-radius:5px;
+	
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear,100% 100%, from(#E57000), to(#7F3E00));
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #E57000, #7F3E00);
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, #E57000, #7F3E00);
+	/* IE 10 */
+	background: -ms-linear-gradient(top, #E57000, #7F3E00);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, #E57000, #7F3E00);
+}
+
+#watDoeJe{
+	width:540px;
+	height:10px;
+	float:left;
+	margin:10px;
+	border-radius:5px;
+}
+
+textarea.watDoeJe{
+	min-width:535px;
+	max-width:535px;
+	min-height:30px;
+	max-height:50px;
+	border-radius:5px;
+	border:0px;
+	font-family: Verdana, Geneva, sans-serif;
+	padding:5px;
+}
+
+#inlogscherm {
+	width:190px;
+	height:100px;
+	float:left;
+	border-radius:5px;
+	font-size:10pt;
+	padding:5px;
+	margin:10px;
+	
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear,100% 100%, from(#E57000), to(#7F3E00));
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #E57000, #7F3E00);
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, #E57000, #7F3E00);
+	/* IE 10 */
+	background: -ms-linear-gradient(top, #E57000, #7F3E00);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, #E57000, #7F3E00);
+}
+
+/* ------------------------------------ KNOPPEN ------------------------------------ */
+
+#knoppen {
+	width:100%;
+	margin-top:10px;
+}
+
+.bestandToevoegen,
+.taakToevoegen ,
+.verzenden {
+	width:32.5%;
+	height:30px;
+	border-radius:5px;
+	cursor:pointer;
+}
+
+/* ------------------------------------ CONTENT ------------------------------------ */
+
+/* ------------------------------- CONTENT MENU BUTTON ----------------------------- */
+
+.menuButton {
+	display:inline-block;
+	color:#000000;
+	font-weight:bold;
+	margin-left:5px;
+	padding-top:10px;
+	width:242px;
+	height:30px;
+	text-align:center;
+	cursor:pointer;
+	border:1px solid #cccccc;
+	border-radius:5px;
+	background-color:#f2f2f2;
+}
+
+.roosterMenuButton{
+	display:inline-block;
+	color:#ffffff;
+	font-size:8pt;
+	font-weight:bold;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin-right:8px;
+	width:19%;
+	position:relative;
+	float:left;
+	text-align:center;
+	cursor:pointer;
+	border-radius:5px;
+	border:1px solid #cccccc;
+	
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear,100% 100%, from(#E57000), to(#7F3E00));
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #E57000, #7F3E00);
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, #E57000, #7F3E00);
+	/* IE 10 */
+	background: -ms-linear-gradient(top, #E57000, #7F3E00);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, #E57000, #7F3E00);
+}
+
+.roosterMenuButton:visited{
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear,100% 100%, from(#000000), to(#cccccc));
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #000000, #cccccc);
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, #000000, #cccccc);
+	/* IE 10 */
+	background: -ms-linear-gradient(top, #000000, #cccccc);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, #000000, #cccccc);
+	color:#FFFFFF;
+}
+
+.roosterMenuButton:hover{
+	text-decoration:underline;
+}
+
+/* ----------------------------------- CONTENT ----------------------------------- */
+#content{
+	width:100%;
+	position:relative;
+	margin-top:0px;
+}
+
+#content > div.active{	
+	display:block;
+}
+
+#berichtenTotaal,
+#takenTotaal,
+#bestandenTotaal{
+	background-color:#FFFFFF;
+	width:100%;
+	height:50px;
+	border-radius:5px;
+	display:none;
+}
+
+#overzicht,
+#rooster,
+#bestanden {
+	width:100%;
+	height:600px;
+	margin-top:-20px;
+	border-radius:5px;
+	display:none;
+	position:relative;
+	overflow:hidden;
+}
+
+#overzicht > div{
+	background-color:#ffffff;
+	width:318px;
+	height:570px;
+	margin-top:10px;
+	margin-left:10px;
+	position:relative;
+	float:left;
+	border-radius:5px;
+	border:1px solid #cccccc;
+	padding:5px;
+}
+
+#alleBestanden{
+	height:97%;
+	overflow:auto;
+}
+
+/* ---------------------------------- PROFIEL -------------------------------- */
+
+#profielNaam{
+	cursor:pointer;
+}
+
+#profielNaam:hover{
+	text-decoration:underline;
+}
+
+#profiel{
+	background-color:#ffffff;
+	height:250px;
+	width:98%;
+	border-radius:5px;
+	margin-top:-10px;
+	margin-left:5px;
+	margin-right:5px;
+	margin-bottom:5px;
+	padding:5px;
+	position:relative;
+	display:none;
+}
+
+#profielFoto{
+	background-image:url('profile-photo.jpg');
+	border-radius:5px;
+	width:150px;
+	height:200px;
+	padding:5px;
+	float:left;
+}
+
+#profielInfo{
+	background-color:#FFFFFF;
+	border-radius:5px;
+	float:left;
+	margin-left:5px;
+	padding:5px;
+	width:820px;
+	height:200px;
+}
+
+#profielTaken,
+#profielBerichten,
+#profielBestanden{
+	background-color:#FFFFFF;
+	border-radius:5px;
+	width:319px;
+	height:300px;
+	position:relative;
+	float:left;
+	padding:5px;
+	margin-top:10px;
+	margin-right:5px;
+	margin-bottom:5px;
+}
+
+table.profielTable{
+	text-align:left;
+	font-size:10pt;
+	width:100%;
+}
+
+ul.profielLijst{
+	text-align:left;
+	list-style-type:armenian;
+}
+
+#mijnBerichten,
+#mijnProfielTaken,
+#mijnProfielBestanden{
+	height:86%;
+	overflow:auto;
+}
+
+.bestand{
+	color:#000000;
+	background-color:#ffae59;
+	margin-bottom:5px;
+	border-radius:5px;
+	padding:5px;
+}
+
+.titelBestand{
+	font-weight:bold;
+}
+
+.faseBestand{
+	font-style:italic;
+}
+
+.deadlineBestand{
+	text-align:right;
+}
+
+/* ---------------------------------- BERICHTEN -------------------------------- */
+
+#tweets,
+#takenOverzicht,
+#alleBestanden{
+	height:93%;
+	overflow:auto;
+}
+
+.bericht{
+	background-color:#ffae59;
+	border-radius:5px;
+	padding:5px;
+	margin-bottom:5px;
+}
+
+p.tweetBericht{
+	color:#FF0000;
+}
+
+p.nameBericht{
+	color:#006600;
+	font-weight:bold;
+}
+
+p.dateBericht{
+	color:0000ff;
+	text-align:right;
+	font-style:italic;
+}
+
+/* ----------------------------------- TAKEN ----------------------------------- */
+
+#takenTotaal{
+	background-color:#ffffff;
+	height:auto;
+	width:auto;
+}
+
+#mijnTaken,
+#takenMedestudenten,
+#gedaneTaken{
+	background-color:#ffffff;
+	width:318px;
+	height:285px;
+	margin-top:-10px;
+	margin-left:10px;
+	position:relative;
+	float:left;
+	border-radius:5px;
+	border:1px solid #cccccc;
+	padding:5px;
+}
+
+#mijnTakenTwee,
+#takenMedestudentenTwee,
+#gedaneTakenTwee{
+	height:85%;
+	overflow:auto;
+}
+
+textarea.taak{
+	min-height:0px;
+	max-height:40px;
+	min-width:0px;
+	max-width:180px;
+	overflow:hidden;
+}
+
+#alleTaken{
+	background-color:#ffffff;
+	width:97%;
+	height:270px;
+	margin-top:5px;
+	margin-left:10px;
+	margin-bottom:5px;
+	position:relative;
+	float:left;
+	border-radius:5px;
+	padding:5px;
+}
+
+#alleTakenTotaal{
+	height:85%;
+	overflow:auto;
+}
+
+.taak{
+	background-color:#ffae59;
+	border-radius:5px;
+	padding:5px;
+	margin-bottom:5px;
+}
+
+p.titelTaak{
+	color:;
+	font-weight:bold;
+}
+
+p.inhoudTaak{
+	color:;
+}
+
+p.prioriteitTaak{
+	color:;
+}
+
+p.userTaak{
+	text-align:right;
+}
+
+div.panel,
+p.flip
+{
+	text-align:left;
+	border-radius:5px;
+	background-color:#FFC084;	
+}
+
+p.flip{
+	cursor:pointer;
+	font-size:10pt;
+}
+
+div.panel{
+	height:120px;
+	display:none;
+	padding:10px;
+}
+
+select.taakSelect{
+	background-color:#ffae59;
+	color:#000000;
+	width:32%;
+}
+
+/* ----------------------------------- ROOSTER ----------------------------------- */
+
+select{
+	background-color:#ffae59;
+	color:#000000;
+	width:18.4%;
+	border:0px;
+}
+
+#rooster > div{
+	background-color:#FFFFFF;
+	width:994px;
+	height:275px;
+	margin-top:10px;
+	margin-left:10px;
+	position:relative;
+	float:left;
+	border-radius:5px;
+	border:1px solid #cccccc;
+	padding:5px;
+}
+
+#vrijRoosterContent > div.active{
+	display:block;
+}
+
+#roosterMaandagVrij,
+#roosterDinsdagVrij,
+#roosterWoensdagVrij,
+#roosterDonderdagVrij,
+#roosterVrijdagVrij{
+	width:970px;
+	height:165px;
+	margin-top:5px;
+	margin-left:5px;
+	padding:5px;
+	position:relative;
+	float:left;
+	display:none;
+	border-radius:5px;
+	border:1px solid #cccccc;
+}
+
+#bezetRoosterContent > div.active{
+	display:block;
+}
+
+#roosterMaandagBezet{
+	margin-left:0px;
+}
+
+#roosterDinsdagBezet{
+	margin-left:198px;
+}
+
+#roosterWoensdagBezet{
+	margin-left:396px;
+}
+
+#roosterDonderdagBezet{
+	margin-left:594px;
+}	
+
+#roosterVrijdagBezet{
+	margin-left:792px;
+}
+	
+#roosterMaandagBezet,
+#roosterDinsdagBezet,
+#roosterWoensdagBezet,
+#roosterDonderdagBezet,
+#roosterVrijdagBezet{
+	margin-top:40px;
+	padding:5px;
+	width:176px;
+	height:180px;	
+	position:absolute;
+	display:none;
+	border-radius:5px;
+	border:1px solid #cccccc;
+}
+
+.clear{			
+	clear:both;
+}
+
+/* ----------------------------------- BESTANDEN ----------------------------------- */
+
+#onvoltooideBestanden,
+#nuBestanden,
+#voltooideBestanden{
+	background-color:#ffffff;
+	width:315px;
+	height:550px;
+	margin-top:10px;
+	margin-left:10px;
+	position:relative;
+	float:left;
+	border-radius:5px;
+	border:1px solid #cccccc;
+	padding:5px;
+}
+
+#onvoltooideBestandenTwee,
+#nuBestandenTwee,
+#voltooideBestandenTwee{
+	height:92%;
+	overflow:auto;
+}
+
+/* ----------------------------------- DE KLOK ----------------------------------- */
+
+@font-face {
+	font-family: Verdana, Geneva, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.clockContainer {
+	width:960px; 
+	margin:0 auto; 
+	overflow:hidden;
+}
+
+
+.clock {
+	width:100px; 
+	color:#000000; 
+}
+
+#Date { 
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+ul.clock { 
+	width:200px; 
+	padding:0px; 
+	list-style:none; 
+}
+
+ul.clock, 
+li.clock { 
+	display:inline; 
+	text-align:center; 
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+/* ----------------------------------- MODAL DIALOG ----------------------------------- */
+
+#basic-modal-content {
+	display:none;
+}
+
+/* achtergrond modal */
+#simplemodal-overlay {
+	background-color:#000000; 
+	cursor:wait;
+}
+
+/* Container */
+#simplemodal-container {
+	height:320px; 
+	width:500px; 
+	color:#000000; 
+	background-color:#ffffff; 
+	border:1px solid #ccc;
+	border-radius:5px;
+}
+
+#simplemodal-container .simplemodal-data {
+	padding:8px;
+}
+
+#simplemodal-container a.modalCloseImg {
+	background:url('img/x.png') no-repeat; 
+	width:25px; 
+	height:29px; 
+	display:inline; 
+	z-index:3200; 
+	position:absolute; 
+	top:-15px; 
+	right:-16px; 
+	cursor:pointer;
+}
+
+textarea.taakTitelTextarea{
+	min-height:20px;
+	max-height:20px;
+	min-width:300px;
+	max-width:300px;
+}
+
+textarea.taakInhoudTextarea{
+	min-height:80px;
+	max-height:80px;
+	min-width:300px;
+	max-width:300px;
+}
+
+table.voegTaakToe{
+	border:0px;
+	text-align:left;
+}
+
+th.taakHoofd{
+	font-weight:bold;
+	font-size:10pt;
+}
+
+#register{
+	/*height:80px;*/
+	border-radius:15px;
+	padding:15px;
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);
+	position:absolute;
+	right:-60px;
+	top:40px;
+	z-index:-1;
+	
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear,100% 100%, from(#E57000), to(#7F3E00));
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #E57000, #7F3E00);
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, #E57000, #7F3E00);
+	/* IE 10 */
+	background: -ms-linear-gradient(top, #E57000, #7F3E00);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, #E57000, #7F3E00);
+}
+
+#register a:hover{
+	position:absolute;
+	right:-58px;
+	top:40px;
+}
